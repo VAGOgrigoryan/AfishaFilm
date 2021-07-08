@@ -124,7 +124,6 @@ public class MoviePurchaseTest {
         MoviePurchase[] expected = new MoviePurchase[]{movie10};
 
         assertArrayEquals(expected, actual);
-
     }
 
     @Test
