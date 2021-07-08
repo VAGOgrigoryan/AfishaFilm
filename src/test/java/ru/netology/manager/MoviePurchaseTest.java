@@ -21,9 +21,8 @@ public class MoviePurchaseTest {
     private MoviePurchase movie10 = new MoviePurchase(10, 100, "50 оттенков серого", "Мелодрама", "URL");
 
 
-
     @Test
-    public void showingTheLast5FilmsInReverseOrder(){
+    public void showingTheLast5FilmsInReverseOrder() {
         PosterManager manager = new PosterManager();
         manager.addMovie(movie6);
         manager.addMovie(movie7);
@@ -38,7 +37,7 @@ public class MoviePurchaseTest {
     }
 
     @Test
-    public void addAllMoviesToTheFeed(){
+    public void addAllMoviesToTheFeed() {
         PosterManager manager = new PosterManager();
         manager.addMovie(movie1);
         manager.addMovie(movie2);
@@ -55,10 +54,10 @@ public class MoviePurchaseTest {
         MoviePurchase[] expected = new MoviePurchase[]{movie10, movie9, movie8, movie7, movie6, movie5, movie4, movie3, movie2, movie1};
 
         assertArrayEquals(expected, actual);
-
     }
+
     @Test
-    public void shouldChangeMaxAmount(){
+    public void shouldChangeMaxAmount() {
         PosterManager manager = new PosterManager(5);
         manager.addMovie(movie1);
         manager.addMovie(movie2);
@@ -75,23 +74,20 @@ public class MoviePurchaseTest {
         MoviePurchase[] expected = new MoviePurchase[]{movie10, movie9, movie8, movie7, movie6,};
 
         assertArrayEquals(expected, actual);
-
     }
 
     @Test
-    public void  shouldShowMinusMovie(){
+    public void shouldShowMinusMovie() {
         PosterManager manager = new PosterManager(-1);
-
 
         MoviePurchase[] actual = manager.getAll();
         MoviePurchase[] expected = new MoviePurchase[]{};
 
         assertArrayEquals(expected, actual);
-
     }
 
     @Test
-    public void mustAdd9Films(){
+    public void mustAdd9Films() {
         PosterManager manager = new PosterManager(9);
         manager.addMovie(movie1);
         manager.addMovie(movie2);
@@ -108,11 +104,10 @@ public class MoviePurchaseTest {
         MoviePurchase[] expected = new MoviePurchase[]{movie10, movie9, movie8, movie7, movie6, movie5, movie4, movie3, movie2};
 
         assertArrayEquals(expected, actual);
-
     }
 
     @Test
-    public void addAMovieToTheFeed(){
+    public void addAMovieToTheFeed() {
         PosterManager manager = new PosterManager(1);
         manager.addMovie(movie1);
         manager.addMovie(movie2);
@@ -133,14 +128,12 @@ public class MoviePurchaseTest {
     }
 
     @Test
-    public void tapeWithTheNumberOfFilms0(){
+    public void tapeWithTheNumberOfFilms0() {
         PosterManager manager = new PosterManager(0);
 
         MoviePurchase[] actual = manager.getAll();
         MoviePurchase[] expected = new MoviePurchase[]{};
 
         assertArrayEquals(expected, actual);
-
     }
-
 }
